@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   Splashscreen
+   ========================================================================== */
+.splashscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 100;
+  transition: opacity .4s .4s;
+}
+
+.splashscreen--is-hidden {
+  opacity: 0;
+}
+
+.splashscreen--is-hidden .preloader {
+  opacity: 0;
+}
+
+.preloader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transition: opacity .4s;
+}
+
+.preloader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  border: 20px solid #EB4E00;
+  animation: fadeInOut 1.6s linear infinite;
+  box-sizing: border-box;
+}
+
+.preloader__text {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%, -50%);
+  color: #585858;
+  font-size: 32px;
+  font-weight: 800;
+  background-color: #fff;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+
+

@@ -5,7 +5,6 @@
 	<!-- ... otros meta tags ... -->
     <link rel="icon" href="images/bg_favicon_logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="images/bg_favicon_logo.png" type="image/x-icon">
-    
     <!-- Para compatibilidad con dispositivos Apple -->
     <link rel="apple-touch-icon" href="images/bg_favicon_logo.png">
     <style>
@@ -21,10 +20,39 @@
             font-family: Arial, sans-serif;
         }
     </style>
+	<link rel="stylesheet" href="css/splash_loading.css">
 </head>
 <body>
+	<!-- SECTION: Splashscreen -->
+	<div class="splashscreen">
+		<div class="preloader">
+			<span class="preloader__text">Creatividad</span>
+		</div>
+	</div>
+	<!-- END SECTION: Splashscreen -->
     <div class="content">
         <!-- Puedes agregar más contenido aquí -->
     </div>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+  const splashscreen = document.querySelector(".splashscreen");
+  const preloader = document.querySelector(".preloader");
+
+  // Ocultar el splashscreen cuando la página esté totalmente cargada
+  window.addEventListener("load", function() {
+    splashscreen.classList.add("splashscreen--is-hidden");
+
+    // Opcional: Eliminar el splashscreen del DOM después de la animación
+    setTimeout(() => {
+      splashscreen.remove();
+    }, 1000); // Ajusta el tiempo según la duración de tu transición (0.6s + 0.6s)
+  });
+
+  // Fallback: Ocultar después de X segundos (por si hay errores en la carga)
+  setTimeout(() => {
+    splashscreen.classList.add("splashscreen--is-hidden");
+  }, 3000); // 3 segundos como máximo
+});
+</script>
 </body>
 </html>
