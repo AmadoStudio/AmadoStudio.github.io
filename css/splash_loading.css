@@ -7,6 +7,21 @@
    background-repeat: no-repeat;
    background-attachment: fixed;
    margin: 0;
+   margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #fff; 
+
+    /* Color de respaldo mientras carga la imagen */
+    background-color: #f8f8f8;
+    
+    /* Mejora la calidad de renderizado */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    
+    overflow-x: hidden;
+    position: static;
+    min-height: 100vh; /* Asegura que cubra al menos toda la ventana */
  }
 .container{
 	 max-width: 1440px;
