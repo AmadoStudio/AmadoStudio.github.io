@@ -1,4 +1,6 @@
 /* RESET BÁSICO */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +9,13 @@
 
 html, body {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Evita scroll horizontal */
+    overflow-x: hidden;
 }
 
-/* IMAGEN GIGANTE QUE OCUPA TODO */
-.full-page-image {
+.page-image {
     display: block;
-    width: 100%; /* Se ajusta al ancho de la pantalla */
-    height: auto; /* Mantiene la proporción original */
-    max-width: 1920px; /* No más ancho que el diseño original */
-    margin: 0 auto; /* Centra la imagen si hay espacio extra */
+    width: 100%;
+    height: auto;
+    max-width: 1920px;
+    margin: 0 auto;
 }
