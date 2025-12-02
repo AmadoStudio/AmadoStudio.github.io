@@ -1,22 +1,18 @@
-/* Elimina márgenes del navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Contenedor del fondo */
-.background {
+html, body {
     width: 100%;
-    min-height: 100vh;
-
-    background-image: url("IMAGES/LANDING_AMADOSTUDIO.png"); /* <-- ruta de tu imagen */
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain; /* mantiene la proporción y ajusta al ancho */
+    overflow-x: hidden;
 }
 
-/* Asegura que se vea toda la imagen haciendo scroll */
-body, html {
+.page-image {
+    display: block;
+    width: 100%;
     height: auto;
+    max-width: 1920px;
+    margin: 0 auto;
 }
