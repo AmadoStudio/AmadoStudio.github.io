@@ -1,25 +1,21 @@
-/* Elimina márgenes del navegador */
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Contenedor del fondo */
-.background {
+html, body {
     width: 100%;
-    min-height: 100vh;
-
-    background-image: url("images/LANDING_AMADOSTUDIO"); /* <-- ruta de tu imagen */
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain; /* mantiene la proporción y ajusta al ancho */
+    height: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
-/* Asegura que se vea toda la imagen haciendo scroll */
-body, html {
-    height: auto;
-}
-
-  padding: 0 20px;
+/* IMAGEN GIGANTE QUE OCUPA TODO */
+.full-page-image {
+    display: block;
+    width: 100%; /* Se ajusta al ancho de la pantalla */
+    height: auto; /* Mantiene la proporción original */
+    max-width: 1920px; /* No más ancho que el diseño original */
+    margin: 0 auto; /* Centra la imagen si hay espacio extra */
 }
