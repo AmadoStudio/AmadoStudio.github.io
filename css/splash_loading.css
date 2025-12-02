@@ -3,6 +3,15 @@
 /* ==========================================================================
    Splashscreen
    ========================================================================== */
+
+ body {
+   background-image: url('images/LANDING_AMADOSTUDIO');
+   background-size: cover;
+   background-position:center top; 
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin: 0;
+ }
 .splashscreen {
   position: fixed;
   top: 0;
