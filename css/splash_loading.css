@@ -1,30 +1,25 @@
-@charset "utf-8";
-
- body {
-   background-image: url('images/LANDING_AMADOSTUDIO');
-   background-size: cover;
-   background-position:center top; 
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   margin: 0;
-   margin: 0;
+/* Elimina márgenes del navegador */
+* {
+    margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
-    color: #fff; 
+    box-sizing: border-box;
+}
 
-    /* Color de respaldo mientras carga la imagen */
-    background-color: #f8f8f8;
-    
-    /* Mejora la calidad de renderizado */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    
-    overflow-x: hidden;
-    position: static;
-    min-height: 100vh; /* Asegura que cubra al menos toda la ventana */
- }
-.container{
-	 max-width: 1440px;
-  margin: 0 auto;
+/* Contenedor del fondo */
+.background {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("images/LANDING_AMADOSTUDIO"); /* <-- ruta de tu imagen */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain; /* mantiene la proporción y ajusta al ancho */
+}
+
+/* Asegura que se vea toda la imagen haciendo scroll */
+body, html {
+    height: auto;
+}
+
   padding: 0 20px;
 }
