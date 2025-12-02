@@ -6,13 +6,12 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* ← ESTO ES CLAVE */
 }
 
 .page-image {
     display: block;
-    width: 100%;
+    width: 100vw; /* ← 100% del viewport (ventana visible) */
     height: auto;
-    max-width: 1920px;
-    margin: 0 auto;
+    max-width: 100%;
 }
