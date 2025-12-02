@@ -1,18 +1,22 @@
+/* Elimina márgenes del navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+/* Contenedor del fondo */
+.background {
     width: 100%;
-    overflow-x: hidden;
+    min-height: 100vh;
+
+    background-image: url("images/landing.png"); /* <-- ruta de tu imagen */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain; /* mantiene la proporción y ajusta al ancho */
 }
 
-.page-image {
-    display: block;
-    width: 100%;
+/* Asegura que se vea toda la imagen haciendo scroll */
+body, html {
     height: auto;
-    max-width: 1920px;
-    margin: 0 auto;
 }
