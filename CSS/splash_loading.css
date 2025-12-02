@@ -1,17 +1,34 @@
+/* splash_loading.css - VERSIÓN CORREGIDA */
+
+/* 1. RESET COMPLETO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 2. BODY Y HTML SIN MARGENES NI SCROLL HORIZONTAL */
 html, body {
     width: 100%;
-    overflow-x: hidden; /* ← ESTO ES CLAVE */
+    max-width: 100%; /* ← NUEVO: Limita el ancho máximo */
+    overflow-x: hidden; /* ← Oculta scroll horizontal */
 }
 
+/* 3. CONTENEDOR PARA LA IMAGEN (OPCIONAL PERO RECOMENDADO) */
+.image-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* ← Esto evita que salga del contenedor */
+}
+
+/* 4. IMAGEN - VERSIÓN CORREGIDA PARA FIREFOX */
 .page-image {
     display: block;
-    width: 100vw; /* ← 100% del viewport (ventana visible) */
-    height: auto;
-    max-width: 100%;
+    width: 100%; /* ← 100% del contenedor */
+    max-width: 100%; /* ← NUNCA más ancha que el contenedor */
+    height: auto; /* ← Mantiene proporción */
+    margin: 0 auto; /* ← Centrada si hay espacio */
+    
+    /* ESTO ELIMINA EL SCROLL HORIZONTAL: */
+    box-sizing: border-box; /* ← Asegura que padding no agregue ancho */
 }
